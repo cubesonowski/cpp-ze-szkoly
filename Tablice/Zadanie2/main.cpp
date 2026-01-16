@@ -26,33 +26,41 @@ void wypiszTrzy(int tablica[]) {
     }
     cout << endl;
 }
-// naprawic
+
 void wypiszWszystkieCyfryParzyste(int tablica[]) {
-    int pom;
-    cout << "Wypisz parzyste cyfry z tablicy" << endl;
+    int pom, cyfra, dziel;
+    bool wszystkieParzyste;
+    cout << "Wypisz liczbe ktora ma wszystkie parzyste cyfry" << endl;
     for (int i = 0; i < w; i++){
-        int pom = tablica[i];
-        while (pom != 0){
-            pom = tablica[i] % 10;
-            if (pom%2 == 0) cout << tablica[i] << endl;
-            pom = tablica[i] / 10;
+        dziel = 1, pom = tablica[i];
+        wszystkieParzyste = true;
+        while (pom > 0) {
+            cyfra = pom%10;
+            if (cyfra%2 != 0) {
+                wszystkieParzyste = false;
+                break;
+            }
+            dziel = 10 * dziel;
+            pom = tablica[i] / dziel;
         }
+        if (wszystkieParzyste) cout << tablica[i] << endl;
     }
     cout << endl;
 }
-// naprawic
+
 void wypiszSumaOsiem(int tablica[]) {
-    int pom, sumaCyfr;
-    cout << "Wypisz wszystkie liczby z tablica ktorych suma cyfr wynosi 8" << endl;
+    int pom, cyfra, dziel, sumaCyfr = 0;
+    cout << "Wypisz wszystkie liczby z tablicy ktorych suma cyfr wynosi 8" << endl;
     for (int i = 0; i < w; i++){
-        int pom = tablica[i];
-        while (pom != 0){
-            pom = tablica[i] % 10;
-            sumaCyfr += pom;
-            pom = tablica[i] / 10;
+        dziel = 1, sumaCyfr = 0, pom = tablica[i];
+        while (pom > 0) {
+            cyfra = pom%10;
+            sumaCyfr += cyfra;
+            dziel = 10 * dziel;
+            pom = tablica[i] / dziel;
         }
         if (sumaCyfr == 8) cout << tablica[i] << endl;
-    }
+    } 
     cout << endl;
 }
 
