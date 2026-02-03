@@ -29,11 +29,10 @@ void wypiszTrzy(int tablica[]) {
 
 void wypiszWszystkieCyfryParzyste(int tablica[]) {
     int pom, cyfra, dziel;
-    bool wszystkieParzyste;
+    bool wszystkieParzyste = true;
     cout << "Wypisz liczbe ktora ma wszystkie parzyste cyfry" << endl;
     for (int i = 0; i < w; i++){
         dziel = 1, pom = tablica[i];
-        wszystkieParzyste = true;
         while (pom > 0) {
             cyfra = pom%10;
             if (cyfra%2 != 0) {
