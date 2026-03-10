@@ -1,0 +1,17 @@
+Zadanie
+
+W pliku liczby.txt danych jest 200 różnych liczb całkowitych z przedziału
+
+[2, 1 000000], każda w osobnym wierszu pliku. Napisz program (lub kilka programów), który poda odpowiedzi do poniższych zadań. Odpowiedzi zapisz do pliku wyniki.txt, który umieść w folderze Twoje_nazwisko.
+
+Zadanie1.
+
+Policz, ile jest w pliku wejściowym liczb mniejszych niż 1000, oraz podaj dwie takie liczby, które pojawiają się w pliku jako ostatnie (możesz założyć, że będą co najmniej dwie).
+
+Zadanie 2
+
+Wśród liczb występujących w pliku wejściowym znajdź te, które mają dokładnie 18 dzielników naturalnych (wliczając w nie 1 i samą liczbę). Dla każdej znalezionej liczby wypisz, oprócz jej wartości, listę wszystkich jej dzielników, posortowaną rosnąco.
+
+Zadanie3
+
+Znajdź największą liczbę w pliku, która jest względnie pierwsza ze wszystkimi pozostałymi, czyli taką, która z żadną z pozostałych liczb nie ma wspólnego dzielnika innego niż 1.
